@@ -1,0 +1,43 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.Header {
+  background-color: red;
+  height: 10vh;
+  display: flex;
+}
+
+.Header h1 {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.toDoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: .1rem 0 1rem;
+  gap: .5rem;
+}
+
+.inputAndSubmit {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: .2rem;
+}
+
+.notesContainer {
+  background-color: rgb(52, 86, 98);
+}
+
+.notes {
+  background-color: rgb(223, 220, 148);
+  padding: 1rem;
+  width: 150px;
+}

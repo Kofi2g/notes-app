@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./Global.css";
+import Header from "./Header";
+
 
 function App() {
+  const [input, setInput] = useState("");
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <div className="toDoContainer">
+        <h1>Add some notes here</h1>
+        <div className="inputAndSubmit">
+          <input></input>
+          <button>Submit</button>
+        </div>
+      </div>
+
+      <div className="notesContainer">
+        <div className="notes">
+          <p>Temp text Temp text Temp text Temp text</p>
+          <p>date</p>
+          <button>&times;</button>
+        </div>
+      </div>
     </div>
   );
 }
