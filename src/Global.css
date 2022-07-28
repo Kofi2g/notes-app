@@ -4,8 +4,22 @@
   margin: 0;
 }
 
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+.toDoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 0;
+  gap: .5rem;
+}
+
 .Header {
-  background-color: red;
+  background-color: rgb(223, 220, 148);
   height: 10vh;
   display: flex;
 }
@@ -16,13 +30,43 @@
   margin-left: 1rem;
 }
 
-.toDoContainer {
+input {
+  border: 2px rgb(0, 0, 0) dotted;
+  height: 40px;
+  font-size: 1.3rem;
+  padding-left: .3rem;
+}
+
+.submit {
+  height: 40px;
+  padding:0.35rem 1.2rem;
+  border: 0.1em dotted #000000;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  font-weight:300;
+  transition: all 0.2s;
+  font-size: 1.3rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.submit:hover {
+  color:#ffffff;
+  background-color:#000000;
+}
+
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: .1rem 0 1rem;
-  gap: .5rem;
+  margin-top: 1rem;
+}
+
+.delete {
+  font-size: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
 }
 
 .inputAndSubmit {
@@ -33,11 +77,21 @@
 }
 
 .notesContainer {
-  background-color: rgb(52, 86, 98);
+  margin: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 1.3rem;
 }
 
 .notes {
   background-color: rgb(223, 220, 148);
-  padding: 1rem;
-  width: 150px;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+
+.time {
+  font-size: 1rem;
+  opacity: .5;
 }
